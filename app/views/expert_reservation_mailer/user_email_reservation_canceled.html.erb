@@ -1,0 +1,5 @@
+<div style="padding:50px;background:#fffffe;">
+  <h1 style="font-size:30px;margin-bottom:40px;text-align:center;">Your reservation is canceled.</h1>
+  <div style="text-align:center;">The expert hasn't approved your reservation, and it's canceled. <br /> Please visit this <a href="<%= ENV['FRONT_APP_URL'] %>/space" target="_blank">page</a> to look for the other experts.</div>
+  <div style="text-align:center;">Please visit this <a href="<%= ENV['FRONT_APP_URL'] %>/mypage/expert_reservation/<%= @expert_reservation.id %>" target="_blank">page</a> to check your reservation details.</div>
+</div>

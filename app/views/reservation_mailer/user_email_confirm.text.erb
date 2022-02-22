@@ -1,0 +1,21 @@
+
+Space reservation is now in progress!
+
+--------------------------
+
+スペース: <%= @reservation.space.name %>
+
+プラン: <%= @reservation.space_plan.name %>
+
+利用期間: <%= @reservation.reserve_from.strftime("%Y年%m月%d日 %H:%M") %> ~ <%= @reservation.reserve_to.strftime("%Y年%m月%d日 %H:%M") %>
+
+人数: 大人 <%= @reservation.people %> 人 / 子ども（12歳以下） <%= @reservation.children %> 人
+
+用途: <%= @reservation.category.name %>
+
+用途詳細: <%= @reservation.description %>
+
+--------------------------
+
+Now we are waiting for the space owner to approve your reservation. You can cancel your reservation in <%= @reservation.space.cancellation_deadline %> hours for free.
+You can visit this page <%= ENV['FRONT_APP_URL'] %>/mypage/space_reservation/<%= @reservation.id %> to check more details.

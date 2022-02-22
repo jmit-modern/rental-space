@@ -1,0 +1,10 @@
+<div style="padding:50px;background:#fffffe;text-align:center;">
+  <h1 style="font-size:30px;margin-bottom:40px;">You purchase the event ticket.</h1>
+
+  <div><img src="<%= @event_reservation.qr_code %>" style="margin:auto;" /></div>
+
+  <div>Please download the QR code and you can take part in the event with this QR code.</div>
+
+  <div>You can visit this <a href="<%= ENV['FRONT_APP_URL'] %>/mypage/event_reservation/<%= @event_reservation.id %>" target="_blank">page</a> to check more details.</div>
+
+</div>

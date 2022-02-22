@@ -1,0 +1,5 @@
+<div style="padding:50px;background:#fffffe;">
+  <h1 style="font-size:30px;margin-bottom:40px;text-align:center;">Your reservation is canceled.</h1>
+  <div style="text-align:center;">The space owner hasn't approved your reservation, and its canceled. <br /> Please visit this <a href="<%= ENV['FRONT_APP_URL'] %>/space" target="_blank">page</a> to look for the other spaces.</div>
+  <div style="text-align:center;">Please visit this <a href="<%= ENV['FRONT_APP_URL'] %>/mypage/space_reservation/<%= @reservation.id %>" target="_blank">page</a> to check your reservation details.</div>
+</div>

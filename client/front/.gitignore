@@ -1,0 +1,7 @@
+.nuxt
+node_modules
+dist
+.eslintcache
+.envnode_modules
+.env
+yarn-error.log

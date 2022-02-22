@@ -1,0 +1,45 @@
+<div style="padding:50px;background:#fffffe;">
+  <h1 style="font-size:25px;margin-bottom:40px;">A customer sent a contact form</h1>
+
+  <table class="contact_table">
+    <tbody>
+    <tr>
+      <th>姓名</th>
+      <td><%= @content[:first_name] %> <%= @content[:last_name] %></td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td><%= @content[:email] %></td>
+    </tr>
+    <tr>
+      <th>電話番号</th>
+      <td><%= @content[:phone] %></td>
+    </tr>
+    <tr>
+      <th>お問い合わせ内容</th>
+      <td><%= @content[:subject] %></td>
+    </tr>
+    <tr>
+      <th>お問い合わせ本⽂</th>
+      <td><%= @content[:message] %></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<style>
+.contact_table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom:50px;
+  width:100%;
+}
+.contact_table th,.contact_table td {
+  border: 1px solid black;
+  padding: 16px;
+  font-size:14px;
+}
+.contact_table th{width: 20%;}
+</style>

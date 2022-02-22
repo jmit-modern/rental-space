@@ -1,0 +1,49 @@
+<div style="padding:50px;background:#fffffe;">
+  <h1 style="font-size:30px;margin-bottom:40px;text-align:center;">A customer wants to reserve your space</h1>
+  <table class="reserve_table">
+    <tbody>
+    <tr>
+      <th>スペース</th>
+      <td><%= @reservation.space.name %></td>
+    </tr>
+    <tr>
+      <th>プラン</th>
+      <td><%= @reservation.space_plan.name %></td>
+    </tr>
+    <tr>
+      <th>利用期間</th>
+      <td><%= @reservation.reserve_from.strftime("%Y年%m月%d日 %H:%M") %> ~ <%= @reservation.reserve_to.strftime("%Y年%m月%d日 %H:%M") %></td>
+    </tr>
+    <tr>
+      <th>人数</th>
+      <td>大人 <%= @reservation.people %> 人 / 子ども（12歳以下） <%= @reservation.children %> 人</td>
+    </tr>
+    <tr>
+      <th>用途</th>
+      <td><%= @reservation.category.name %></td>
+    </tr>
+    <tr>
+      <th>用途詳細</th>
+      <td><%= @reservation.description %></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div style="text-align:center;">Please approve the reservation order visiting this <a href="<%= ENV['FRONT_APP_URL'] %>/mypage/space_order/<%= @reservation.id %>" target="_blank">page.</a></div>
+  <div style="text-align:center;">If you don't approve the reservation, it will be cancelled automatically after <%= @reservation.space.cancellation_deadline %> hours.</div>
+
+</div>
+
+<style>
+.reserve_table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom:50px;
+  width:100%;
+}
+.reserve_table th,.reserve_table td {
+  border: 1px solid black;
+  padding: 16px;
+}
+.reserve_table th{width: 20%;}
+</style>
